@@ -26,7 +26,7 @@ Built locally
 #### Basic usage
 
 ```
- docker run node 
+ docker run earvin/nodejs
 ```
 
 #### compose in another Dockerfile
