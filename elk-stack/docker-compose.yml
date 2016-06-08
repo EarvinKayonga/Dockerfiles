@@ -1,5 +1,5 @@
 nginx:
-  image: kensodev/kibana-nginx
+  build: kibana-nginx
   links:
     - kibana
   ports:
@@ -12,7 +12,7 @@ elasticsearch:
     - "9300:9300"
 logstash:
   command: "logstash -f /opt/logstash/server/etc/conf.d/"
-  image: kensodev/logstash:latest
+  build: docker-logstash/
   volumes:
     - ./logstash/config:/etc/logstash/conf.d
   ports:
