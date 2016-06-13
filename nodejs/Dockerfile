@@ -8,7 +8,7 @@ RUN	git clone https://github.com/nodejs/node.git nodejs
 WORKDIR	nodejs
 
 RUN	./configure
-RUN	make
+RUN	make -j 4
 RUN	make install
 
 ENTRYPOINT ["out/Release/node"]
