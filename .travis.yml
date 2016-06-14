@@ -4,5 +4,5 @@ services:
   - docker
 
 script:
-  - docker run earvin/nodejs
-  - cd elk-stack; docker-compose up -d
+  - cd nodejs/; docker build -t earvin/nodejs; docker run earvin/nodejs
+  - cd ../elk-stack; docker-compose build; docker-compose up -d
