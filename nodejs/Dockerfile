@@ -11,5 +11,7 @@ RUN	./configure
 RUN	make -j 4
 RUN	make install
 
+RUN	rm -rf *
+
 ENTRYPOINT ["/usr/local/bin/node"]
 CMD	["-e",  "console.log('Hello from Node.js ' + process.version)"]
